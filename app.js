@@ -26,10 +26,6 @@ class Contact {
         this.email = email;
     }
 
-    displayContact() {
-        return `${this.firstName} ${this.lastName}, ${this.address}, ${this.city}, ${this.state}, ${this.zip}, Phone: ${this.phone}, Email: ${this.email}`;
-    }
-
     static validateName(name) {
         return /^[A-Z][a-zA-Z]{2,}$/.test(name);
     }
