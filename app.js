@@ -76,3 +76,4 @@ addressBook.addContact("Priyanshu", "Sharma", "Mathura", "CityName", "UttarPrade
 addressBook.addContact("xyz", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "xyz@gmail.com");
 addressBook.addContact("Sohan", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "Sohan@gmail.com");
 console.log(JSON.stringify(addressBook.contacts));
+console.log();
