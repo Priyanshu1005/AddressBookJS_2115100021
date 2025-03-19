@@ -47,23 +47,4 @@ class Contact {
     }
 }
 
-const contacts = [];
 
-// Function to add a new contact
-function addContact(firstName, lastName, address, city, state, zip, phone, email) {
-    try {
-        const contact = new Contact(firstName, lastName, address, city, state, zip, phone, email);
-        contacts.push(contact);
-        console.log('Contact added successfully:', contact);
-    } catch (error) {
-        console.error('Error adding contact:', error.message);
-    }
-}
-
-console.log(JSON.stringify(contacts));
-addContact("Dheeraj", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "dheeraj@gmail.com");
-addContact("Abc", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "abc@gmail.com");
-addContact("Priyanshu", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "priyanshu@gmail.com");
-addContact("xyz", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "xyz@gmail.com");
-addContact("Sohan", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "Sohan@gmail.com");
-console.log(JSON.stringify(contacts));
