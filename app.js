@@ -15,14 +15,6 @@ class Contact {
     }
 }
 
-const contacts = [];
 
-// Function to add a new contact
-function addContact(firstName, lastName, address, city, state, zip, phone, email) {
-    const contact = new Contact(firstName, lastName, address, city, state, zip, phone, email);
-    contacts.push(contact);
-}
 
-console.log(JSON.stringify(contacts));
-addContact("Priyanshu", "Sharma", "Mathura", "CityName", "StateName", "281001", "1234567890", "priyanshu@example.com");
-console.log(JSON.stringify(contacts));
+
