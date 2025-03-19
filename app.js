@@ -51,23 +51,32 @@ class Contact {
     }
 }
 
-const contacts = [];
+class AddressBook {
+    constructor() {
+        this.contacts = [];
+    }
 
-// Function to add a new contact
-function addContact(firstName, lastName, address, city, state, zip, phone, email) {
-    try {
-        const contact = new Contact(firstName, lastName, address, city, state, zip, phone, email);
-        contacts.push(contact);
-        console.log('Contact added successfully:', contact);
-    } catch (error) {
-        console.error('Error adding contact:', error.message);
+    addContact(firstName, lastName, address, city, state, zip, phone, email) {
+        try {
+            const contact = new Contact(firstName, lastName, address, city, state, zip, phone, email);
+            this.contacts.push(contact);
+            console.log('Contact added successfully:', contact);
+        } catch (error) {
+            console.error('Error adding contact:', error.message);
+        }
+    }
+
+    displayContacts() {
+        return this.contacts.map(contact => contact.displayContact());
     }
 }
 
-console.log(JSON.stringify(contacts));
-addContact("Dheeraj", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "dheeraj@gmail.com");
-addContact("Abc", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "abc@gmail.com");
-addContact("Priyanshu", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "priyanshu@gmail.com");
-addContact("xyz", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "xyz@gmail.com");
-addContact("Sohan", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "Sohan@gmail.com");
-console.log(JSON.stringify(contacts));
+const addressBook = new AddressBook();
+
+console.log(JSON.stringify(addressBook.contacts));
+addressBook.addContact("Dheeraj", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "dheeraj@gmail.com");
+addressBook.addContact("Abc", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "abc@gmail.com");
+addressBook.addContact("Priyanshu", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "priyanshu@gmail.com");
+addressBook.addContact("xyz", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "xyz@gmail.com");
+addressBook.addContact("Sohan", "Sharma", "Mathura", "CityName", "UttarPradesh", "281001", "1234567890", "Sohan@gmail.com");
+console.log(JSON.stringify(addressBook.contacts));
